@@ -8,7 +8,7 @@ class MinSub(Node):
 
     def __init__(self):
         super().__init__('min_sub')
-        self.subscription_ = self.create_subscription(LowState, 'rt/lowstate', self.listener_callback, 10)
+        self.subscription_ = self.create_subscription(LowState, '/lowstate', self.listener_callback, 10)
         self.subscription_
 
     def listener_callback(self, msg):
