@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'dog_listener = reading_foot_sensor.lowStatePub:main'
         ],
     },
 )
