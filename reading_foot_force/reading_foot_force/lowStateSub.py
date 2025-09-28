@@ -20,18 +20,13 @@ class MinSub(Node):
         t_end = perf_counter_ns()
         if t_end - self.t_start > self.t_delta_ns:
             self.t_start = t_end
-            # if msg.foot_force is a string:
-            log = ','.join(msg.foot_force.split(' '))
-            # if msg.foot_force is an array:
-            # log = ','.join(map(str, msg.foot_force))
 
-            # timestamp in ms
+            # log is of the form: <timestamp>,<f1>,<f2>,<f3>,<f4>
             timestamp_ms = int(time() * 1000)
-            log = str(timestamp_ms) + ',' + log
-
-            # check that this works; the below logger prints additional stuff that isn't needed,
-            # so does a regular print work?
+            log = str(timestamp_ms) + ',' + ','.join(map(str, msg.foot_force))
             print(log)
+
+            # old log:
             # self.get_logger().info(f"Recieved: {msg.foot_force}")
 
 def main():
