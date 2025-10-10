@@ -1,0 +1,4 @@
+- adjust hyperparameters
+- Micah: learn wtf a CNN is
+- Micah: look at slides for CMPT 310 that teach what a CNN is
+- Yaaska: research this filtering you keep mentioning where it can remove oscillations from walking
